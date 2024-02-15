@@ -12,8 +12,7 @@
     height: 30rem;
     
     background-color: white;
-    position: relative;
-    z-index: 0;
+    box-shadow: 10px 10px 10px var(--clr-cyan400);
 }
 
 .pricing__title{
@@ -38,6 +37,21 @@
 }
 @media (max-width:768px) {
     .pricing__container{
-        width: 100%;
+        width: 80%;
+        height: 20rem;
+    }
+    .pricing__title{
+        font-size: var(--size-2xl);
+    }
+    .pricing__txt{
+        font-size: var(--size-xl);
+    }
+}
+@media (max-width:640px) {
+    .pricing__title{
+        font-size: var(--size-lg);
+    }
+    .pricing__txt{
+        font-size: var(--size-sm);
     }
 }

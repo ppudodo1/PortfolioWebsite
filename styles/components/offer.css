@@ -35,11 +35,19 @@
 @media (max-width:1280px) {
     .offer__container{
         width: 40%;
+        
     }
 
 }
 @media (max-width:768px) {
     .offer__container{
         width: 100%;
+        height: 15rem;
+    }
+    .offer__title{
+        font-size: var(--size-xl);
+    }
+    .offer_desc{
+        font-size: var(--size-sm);
     }
 }

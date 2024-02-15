@@ -7,4 +7,7 @@ import '../styles/components/service.css';
 import '../styles/components/offer.css';
 import '../styles/components/pricing.css';
 import '../styles/components/more.css';
+import '../styles/components/mobile-nav.css';
 import '../styles/utils.css';
+import mobileNav from './utils/mobile-nav';
+mobileNav();
