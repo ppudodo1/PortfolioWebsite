@@ -15,6 +15,12 @@
     display: flex;
     flex-direction: column;
     width: 20%;
+    transition: all 0.4s;
+    
+}
+.offer__container:hover{
+    transform: translateY(-20px);
+    box-shadow: 7px 7px 1px var(--clr-teal400);
 }
 .offer__title{
     padding: 20px;

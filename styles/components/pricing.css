@@ -5,38 +5,107 @@
     flex-wrap: wrap;
     gap: 2rem;
 }
-.pricing__container {
-    color: white;
-    border-radius: 20px;
+.animContainer{
     width: 30%;
     height: 30rem;
-    
-    background-color: white;
-    box-shadow: 10px 10px 10px var(--clr-cyan400);
-}
 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.pricing__container {
+    color: white;
+    border-radius: 10px;
+    width: 98%;
+    height: 98%;
+    background-color: white;
+
+    position: absolute;
+    overflow: hidden;
+  
+}
+.animContainer::before{
+    content: "";
+    background-image: conic-gradient(var(--clr-cyan400) 20deg, transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 4s linear infinite;
+}
+.animContainer::after{
+    content: "";
+    width: 98%;
+    height: 98%;
+    
+    position: absolute;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
 .pricing__title{
-    padding: 20px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    padding-right: 40px;
     color: black;
     font-size: var(--size-3xl);
 }
+.pricing__price{
+    color: black;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    font-size: var(--size-2xl);
+    font-weight: 400;
+    text-decoration:underline dotted;
+}
 .pricing__txt{
+    
     color: black;
     font-size: var(--size-xl);
     margin-bottom: 20px;
     font-weight: 500;
+    list-style-type: none;
+    margin-right: 10px;
+}
+.pricing__txt::before {
+    content: "\2713"; 
+    font-size: 24px; 
+    color: var(--clr-cyan400); 
+    margin-right: 10px; /* Adjust the spacing between the checkmark and text */
+    font-weight: 800;
 }
 .pricing__option{
     text-align: center;
 }
 @media (max-width:1280px) {
     .pricing__container{
+        width: 98%;
+        height: 98%;
+    }
+    .animContainer{
         width: 40%;
     }
 
 }
 @media (max-width:768px) {
     .pricing__container{
+        width: 98%;
+        height: 98%;
+
+    }
+    .animContainer{
         width: 80%;
         height: 20rem;
     }
