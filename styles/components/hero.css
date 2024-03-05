@@ -5,7 +5,9 @@
     align-items: center;
     text-align: center;
     gap: 1rem;
+    margin-bottom: 400px;
 }
+
 
 .hero__btn{
     background-color: var(--clr-teal500);

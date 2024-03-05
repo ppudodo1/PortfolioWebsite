@@ -17,6 +17,7 @@
     max-width: 60ch;
     font-size: var(--size-sm);
     color: var(--clr-light);
+    
 }
 .about__hr{
     border-color: var(--clr-slate800);
@@ -46,6 +47,23 @@
 .about__list::before{
     content: '';
     margin-left: 0.5em;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100px);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+   
+}
+@media (prefers-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
 }
 @media (min-width:475px) {
     .about{
