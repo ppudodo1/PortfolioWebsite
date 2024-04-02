@@ -11,5 +11,7 @@ import '../styles/components/mobile-nav.css';
 import '../styles/utils.css';
 import mobileNav from './utils/mobile-nav';
 import { animate } from './utils/scroll';
+import changeDiv from './utils/change';
 mobileNav();
 animate();
+changeDiv();
