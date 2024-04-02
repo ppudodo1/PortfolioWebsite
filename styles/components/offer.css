@@ -14,6 +14,7 @@
     flex-wrap: wrap;
     gap: 5rem;
     margin-bottom: 150px;
+    
 }
 .engine__txt{
     width: 30%;
@@ -59,5 +60,12 @@
     }
     .engine{
         margin-bottom: 10px;
+    }
+}
+@media (max-width:478px) {
+    .engine{
+        border: 1px solid #9CE9FF;
+        padding: 10px;
+        border-radius: 20px;
     }
 }

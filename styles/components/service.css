@@ -123,4 +123,7 @@
     #rightButton{
         display: none;
     }
+    .outerDiv{
+        display: none;
+    }
 }
