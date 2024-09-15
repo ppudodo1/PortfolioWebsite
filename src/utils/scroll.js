@@ -1,20 +1,19 @@
 export function animate() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      },
-      {
-        root: null, // Watch for intersection changes in relation to the viewport
-        threshold: 0.5, // Trigger when 50% of the element is visible
-      }
-    );
-  
-    const hiddenElements = document.querySelectorAll('.hidden');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    {
+      root: null, // Watch for intersection changes in relation to the viewport
+      threshold: 0.5, // Trigger when 50% of the element is visible
+    }
+  );
 
-    hiddenElements.forEach((el) => observer.observe(el));
-    
-  }
+  const hiddenElements = document.querySelectorAll(".hidden");
+  console.log("test");
+  hiddenElements.forEach((el) => observer.observe(el));
+}
